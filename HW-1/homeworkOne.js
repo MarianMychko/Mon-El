@@ -48,6 +48,11 @@ console.log('Sum rounding down is an odd number.')
 const sumRest = (500 - productItemOne) + (500 - productItemTwo) + (500 - productItemThree);
 console.log(`The amount of the rest ${sumRest}`);
 
+/* or */
+
+const sumRest1 = (500 - fullPrice)
+console.log(`The amount of the rest ${sumRest1}`);
+
 /* 10 */
 
 const averagePrice = fullPrice / 3;
@@ -62,3 +67,20 @@ let netProfit = (fullPrice/2) - personalDiscount.toFixed(2);
 console.log(`Our net profit is ${netProfit}`);
 
 /* advanced */
+
+console.log(`Max price ${maxPrice};
+Min price ${minPrice};
+Sum of product items ${fullPrice};
+Sum rounding price ${roundMinPrice};
+Rounding to hundreds ${roundTo100Price};`)
+if (Math.floor(fullPrice) % 2 == 0) {
+    console.log('Sum rounding down is a even number.') 
+    } else {
+    console.log('Sum rounding down is an odd number.')
+    };
+console.log(`The amount of the rest ${sumRest};`)
+/* or */
+console.log(`The amount of the rest ${sumRest1};
+Average Price ${averagePrice.toFixed(2)};
+Client discount is ${personalDiscount.toFixed(2)};
+Our net profit is ${netProfit}`)
