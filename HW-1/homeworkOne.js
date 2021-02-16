@@ -78,9 +78,9 @@ if (Math.floor(fullPrice) % 2 == 0) {
     } else {
     console.log('Sum rounding down is an odd number.')
     };
-console.log(`The amount of the rest ${sumRest};`)
-/* or */
-console.log(`The amount of the rest ${sumRest1};
+console.log(
+`The amount of the rest ${sumRest}
+The amount of the rest ${sumRest1};
 Average Price ${averagePrice.toFixed(2)};
 Client discount is ${personalDiscount.toFixed(2)};
-Our net profit is ${netProfit}`)
+Our net profit is ${netProfit}`);
