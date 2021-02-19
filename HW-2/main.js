@@ -3,20 +3,22 @@ do {
   userNNum = parseInt(prompt("Введи своє число N"));
 } while (Number.isNaN(userNNum));
 
-console.warn(
-  `%c Твоє число N 👉 ${userNNum}  `,
-  "background: #221123; color: #fafa52"
-);
-
 let userMNum;
 do {
   userMNum = parseInt(prompt("Введи своє число M"));
 } while (Number.isNaN(userMNum));
 
-console.warn(
-  `%c Твоє число M 👉 ${userMNum}  `,
-  "background: #041123; color: #fafa52"
-);
+if (userNNum < userMNum) {
+  console.warn(
+    `%c Число N 👉 ${userNNum}, Число M 👉 ${userMNum}`,
+    "background: #041123; color: #fafa52"
+  );
+} else {
+  let reverseMtoN = userNNum;
+  userNNum = userMNum;
+  userMNum = reverseMtoN;
+  console.warn(`міняєм числа місцями N 👉 ${userNNum}, M 👉 ${userMNum}`);
+}
 
 const askSkipEvenNum = confirm(`Пропускати парні числа?`);
 
