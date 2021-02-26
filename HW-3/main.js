@@ -36,9 +36,8 @@ function getTaxSalary(salary) {
 
 //#5
 
-function getRandomNumber(numN, numM) {
-  return Math.floor(Math.random() * numM) + numN;
-}
+let getRandomNumber = (numN, numM) => Math.floor(Math.random() * numM) + numN;
+
 
 //#6
 
@@ -50,8 +49,14 @@ function countLetter(letter, word) {
   return count;
 }
 
+//#11
 
-//#7
+function deleteLetters(userLetter, delLetters) {
+  const yourLetters = delLetters.replaceAll(userLetter, '');
+  return yourLetters;
+}
+
+
 
 
 
@@ -61,3 +66,4 @@ document.writeln(`Функція №3: ${getCorrectName('mArIaN')} <br>`);
 document.writeln(`Функція №4: ${getTaxSalary(1000)} <br>`);
 document.writeln(`Функція №5: ${getRandomNumber(15, 53)} <br>`);
 document.writeln(`Функція №6: ${countLetter('r', 'cursor family')} <br>`);
+document.writeln(`Функція №11: ${deleteLetters('m', 'bimbimbim')} <br>`);
