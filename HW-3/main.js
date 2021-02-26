@@ -49,7 +49,7 @@ function countLetter(letter, word) {
   return count;
 }
 
-//#11
+//#9
 
 function deleteLetters(userLetter, delLetters) {
   const yourLetters = delLetters.replaceAll(userLetter, '');
