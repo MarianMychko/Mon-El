@@ -56,6 +56,18 @@ function deleteLetters(userLetter, delLetters) {
   return yourLetters;
 }
 
+//#11
+
+
+function uniqueLetters(str) {
+  var str = str.split('');
+  var res = str.filter(function(val,i, str) {
+  return str.lastIndexOf(val) === str.indexOf(val);
+      
+  });
+  return res;
+}
+
 
 
 
@@ -66,4 +78,5 @@ document.writeln(`Функція №3: ${getCorrectName('mArIaN')} <br>`);
 document.writeln(`Функція №4: ${getTaxSalary(1000)} <br>`);
 document.writeln(`Функція №5: ${getRandomNumber(15, 53)} <br>`);
 document.writeln(`Функція №6: ${countLetter('r', 'cursor family')} <br>`);
-document.writeln(`Функція №11: ${deleteLetters('m', 'bimbimbim')} <br>`);
+document.writeln(`Функція №9: ${deleteLetters('m', 'bimbimbim')} <br>`);
+document.writeln(`Функція №11: ${uniqueLetters("Бісквіт був дуже ніжним")} <br>`);
