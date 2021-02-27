@@ -18,30 +18,34 @@ function getPairs(students) {
 }
 
 function getTasksForStudents(pairs, themes) {
-  let studentsThemes = [];
+  let studentsThemes = []
   for (let i = 0; i < pairs.length; i++) {
-    studentsThemes[i] = [pairs[i], themes[i]];
+    studentsThemes[i] = [pairs[i].join([' 1 ']), themes[i]]
   }
-  return studentsThemes;
+  return studentsThemes
 }
 
 function getStudentMarks(students, marks) {
-  let studentsMarks = [];
-  for (let i = 0; i < students.length; i++) {
-    studentsMarks[i] = [students[i], marks[i]];
-  }
-  return studentsMarks;
+    let studentsMarks = []
+    for (let i = 0; i < students.length; i++) {
+        studentsMarks[i] = [students[i], marks[i]]
+    }
+    return studentsMarks
 }
+
 
 function getStudentPairsMarks(studentsPairs, themes) {
-  let studentPairsMarks = [];
-  for (let i = 0; i < studentsPairs.length; i++) {
-    mark = Math.floor(Math.random() * 5) + 1;
-    studentPairsMarks[i] = [studentsPairs[i], themes[i], mark];
+    let studentPairsMarks = []
+    for(let i = 0; i < studentsPairs.length; i++){
+      mark = Math.floor(Math.random() * 5) + 1
+      studentPairsMarks[i] = [studentsPairs[i].join([' i ']), themes[i], mark]
+    }
+      
+      return studentPairsMarks
+    
+    
   }
 
-  return studentPairsMarks;
-}
 
 const pairs = getPairs(students);
 console.log(pairs);
