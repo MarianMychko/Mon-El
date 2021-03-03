@@ -1,22 +1,20 @@
 //#1
 
-function getMaxDigit(number) {
-  const digits = String(number);
-  return Math.max.apply(Math, digits.split(''));
-}
+const getMaxDigit = (number) =>
+  Math.max(...Array.from(String(number)).map((item) => parseInt(item)));
 
 //#2
 
 function numberStage(num, stage) {
-  let result = num;
-  if (stage === 1) {
-    result = num;
-  } else {
+  if (stage > 0) {
+    let result = num;
     for (let i = 1; i < stage; i++) {
       result = num * result;
     }
+    return result;
+  } else {
+    return 'Sorry mistake)';
   }
-  return result;
 }
 
 //#3
@@ -38,7 +36,6 @@ function getTaxSalary(salary) {
 
 let getRandomNumber = (numN, numM) => Math.floor(Math.random() * numM) + numN;
 
-
 //#6
 
 function countLetter(letter, word) {
@@ -51,32 +48,26 @@ function countLetter(letter, word) {
 
 //#9
 
-function deleteLetters(userLetter, delLetters) {
-  const yourLetters = delLetters.replaceAll(userLetter, '');
-  return yourLetters;
-}
+const deleteLetters = (userLetter, delLetters) =>
+  delLetters.replaceAll(userLetter, '');
 
 //#11
 
-
 function uniqueLetters(str) {
-  var str = str.split('');
-  var res = str.filter(function(val,i, str) {
-  return str.lastIndexOf(val) === str.indexOf(val);
-      
+  const str = str.split('');
+  const res = str.filter(function (val, i, str) {
+    return str.lastIndexOf(val) === str.indexOf(val);
   });
   return res;
 }
 
-
-
-
-
 document.writeln(`Функція №1: ${getMaxDigit(25788485635876853)} <br>`);
-document.writeln(`Функція №2: ${numberStage(4, 3)}<br>`);
+document.writeln(`Функція №2: ${numberStage(4, 4)}<br>`);
 document.writeln(`Функція №3: ${getCorrectName('mArIaN')} <br>`);
 document.writeln(`Функція №4: ${getTaxSalary(1000)} <br>`);
 document.writeln(`Функція №5: ${getRandomNumber(15, 53)} <br>`);
 document.writeln(`Функція №6: ${countLetter('r', 'cursor family')} <br>`);
 document.writeln(`Функція №9: ${deleteLetters('m', 'bimbimbim')} <br>`);
-document.writeln(`Функція №11: ${uniqueLetters("Бісквіт був дуже ніжним")} <br>`);
+document.writeln(
+  `Функція №11: ${uniqueLetters('Бісквіт був дуже ніжним')} <br>`
+);
