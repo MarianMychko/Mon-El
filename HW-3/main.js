@@ -54,9 +54,9 @@ const deleteLetters = (userLetter, delLetters) =>
 //#11
 
 function uniqueLetters(str) {
-  const str = str.split('');
-  const res = str.filter(function (val, i, str) {
-    return str.lastIndexOf(val) === str.indexOf(val);
+  let string = str.split('');
+  let res = string.filter(function (val, i, string) {
+    return string.lastIndexOf(val) === string.indexOf(val);
   });
   return res;
 }
