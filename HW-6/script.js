@@ -31,7 +31,7 @@ const students = [
 //1
 
 function getSubjects(student) {
-  const subjectsArray = Object.keys(student.subjects)
+  const subjectsArray = Object.keys(student.subjects);
   const newArray = subjectsArray.map((item) => {
     return (item.charAt(0).toUpperCase() + item.slice(1)).replace('_', ' ');
   });
@@ -65,41 +65,40 @@ console.log(getStudentInfo(students[0]));
 //4
 
 function getStudentsNames(students) {
-    let nameArray = [];
-    for (const key in students) {
-      nameArray.push(students[key].name);
-    }
-    return nameArray.sort();
+  let nameArray = [];
+  for (const key in students) {
+    nameArray.push(students[key].name);
   }
-  
-  console.log(getStudentsNames(students));
+  return nameArray.sort();
+}
 
-  //5
+console.log(getStudentsNames(students));
 
-  function getBestStudent(students) {
-    let bestStudent = "";
-    let bestMark = 0;
-    for (const key in students) {
-      if (getAverageMark(students[key]) > bestMark) {
-        bestStudent = students[key].name;
-      } 
+//5
+
+function getBestStudent(students) {
+  let bestStudent = '';
+  let bestMark = 0;
+  for (const key in students) {
+    if (getAverageMark(students[key]) > bestMark) {
+      bestStudent = students[key].name;
     }
-    return bestStudent;
   }
-  
-  console.log(getBestStudent(students));
-  
+  return bestStudent;
+}
 
-  //6
+console.log(getBestStudent(students));
 
-  function calculateWordLetters(string) {
+//6
+
+function calculateWordLetters(string) {
   const obj = {};
-  const arrString = string.split("");
-   const result = arrString.reduce((prev, current) => {
+  const arrString = string.split('');
+  const result = arrString.reduce((prev, current) => {
     prev[current] = (prev[current] || 0) + 1;
     return prev;
   }, obj);
   return result;
 }
 
-console.log(calculateWordLetters("тест"));
+console.log(calculateWordLetters('тест'));
