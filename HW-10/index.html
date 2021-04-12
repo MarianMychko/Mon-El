@@ -1,124 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HW-10</title>
-    <style>
-              *,
-              *:before,
-              *:after{
-                  margin: 0;
-                  padding: 0;
-                  box-sizing: border-box;
-              }
-              @font-face {
-                  font-family: "HelveticaRegular";
-                  src: url("./fonts/HelveticaRegular/HelveticaRegular.eot");
-                  src: url("./fonts/HelveticaRegular/HelveticaRegular.eot?#iefix")format("embedded-opentype"),
-                  url("./fonts/HelveticaRegular/HelveticaRegular.woff") format("woff"),
-                  url("./fonts/HelveticaRegular/HelveticaRegular.ttf") format("truetype");
-                  font-style: normal;
-                  font-weight: normal;
-              }
-              .container{
-                  height: 100vh;
-                  width: 100%;
-                  max-width: 1000px;
-                  margin: 0 auto;
-                  padding-right: 15px;
-                  padding-left: 15px;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-              }
-              .grid{
-                  display: none;
-                  grid-template-columns: repeat(5, 50px);
-                  justify-content: center;
-                  align-content: center;
-              }
-              .block{
-                  background-color: #ffffff;
-                  width: 50px;
-                  height: 50px;
-                  border: #ffffff 2px solid;
-              }
+    <script src="main.js" defer></script>
+</head>
 
-              button:focus {
-                  outline: none;
-              }
-              button{
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  margin: 55px auto;
-                  width: 100%;
-                  max-width: 290px;
-                  min-width: 90px;
-                  box-shadow: 0px 15px 15px #1a131340;
-                  border: none;
-                  font-family: 'Helvetica', sans-serif;
-                  font-style: normal;
-                  font-weight: bold;
-                  font-size: 15px;
-                  color: #111111;
-                  transition: 0.2s linear;
-        background: linear-gradient(#4be916, #aaff00);
-        background-position: 0 0;
-        border-radius: 50px;
-        border: 1px solid ;
-        animation: background 3s infinite alternate;
-      }
-
-      @keyframes background {
-        50% {
-          background: linear-gradient(#aaff00, #00e100);
-          background-position: 0 100px;
-        }
-      }
-    </style>
-  </head>
-  <body>
+<body>
     <div class="container">
-      <div class="grid">
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-      </div>
-        <button type="button" onclick="generateBlocks()">
-          Generate Blocks
-        </button>
-        <button type="button" onclick="generateBlocksInterval()">
-          Generate Blocks Interval
-        </button>
+
+        <input type="button" value="New Blocks" onclick="newSqueres()">
+        <input type="button" value="Dynamic Blocks" onclick="dynamicSqures()">
+        <input type="button" value="Stop" onclick="stopDynamicSqures()">
     </div>
-    <script defer src="./main.js"></script>
-  </body>
+</body>
+
 </html>
