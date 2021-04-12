@@ -12,26 +12,25 @@ function blocks() {
         template.appendChild(row);
 
         for (let j = 0; j < limit; j++) {
-            const squere = document.createElement("div");
-            squere.classList.add("squere");
+            const block = document.createElement("div");
+            block.classList.add("block");
 
-            row.appendChild(squere);
+            row.appendChild(block);
 
             function getRandomColor() {
                 return `#${(Math.random().toString(16) + '000000').substring(2,8).toUpperCase()}`;
             }
-            squere.style.backgroundColor = getRandomColor();
-            squere.style.height = "50px"
-            squere.style.width = "50px"
-            squere.style.margin = "1px"
-            squere.style.border = "2px solid #000"
+            block.style.backgroundColor = getRandomColor();
+            block.style.height = "50px"
+            block.style.width = "50px"
+            block.style.margin = "1px"
+            block.style.border = "2px solid #000"
         }
 
-    }
+}
 }
 
-
-function newSqueres() {
+function newBlocks() {
     if (!document.querySelector('.template')) {
         blocks();
     }
@@ -41,7 +40,7 @@ function newSqueres() {
 
 let abort = false
 
-function dynamicSqures() {
+function dynamicBlocks() {
 
     abort = false
     setInterval(() => {
@@ -57,6 +56,6 @@ function dynamicSqures() {
     }, 1000)
 }
 
-function stopDynamicSqures() {
-    abort = true
+function stopDynamicBlocks() {
+    abort = true;
 }
