@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap" rel="stylesheet">
+  <title>HW-13</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="buttons">
+      <div class="buttons__characters">
+        <label for="film-id">Select episode</label><br>
+        <input id="film-id" type="number" name="filmNumber" size="6" min="1" max="6" value="2"><br>
+        <button id="getFilm">Get characters info</button>
+      </div>
+      <div class="buttons__planets">
+        <button id="getPlanets">Get planets name</button><br>
+        <button id="next">Next</button>
+      </div>
+    </div>
+    <div class="characters"></div>
+    <div class="planets"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

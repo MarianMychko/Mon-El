@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(img/BG.jpg) 100% 100% no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Encode Sans', sans-serif;
+  }
+  
+  button {
+    width: 180px;
+    height: 50px;
+    color: #010913;
+    background-color: rgba(0, 139, 163, 0.467);
+    margin: 10px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Encode Sans', sans-serif;
+  }
+  
+  .buttons {
+    margin: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 25px;
+  }
+  
+  .buttons__characters,
+  .buttons__planets {
+    width: 65%;
+    text-align: center;
+    margin: 0 auto;
+    color: #000d1d;
+  }
+  
+  input {
+    border-radius: 10px;
+    background-color: #8d1414a1;
+    border-style: double, #000042;
+
+  }
+  input:hover {
+  border: 3px solid #b80202;
+  transition: all 0.8s ease;
+  border-radius: 10px;
+}
+
+
+  
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  
+  .characters {
+    width: 100%;
+    color: #011f46;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .character {
+    width: 10%;
+    background: rgba(115, 52, 151, 0.33);
+    border: 1px solid #910202;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .character__gender img {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .planets {
+    width: 25%;
+    margin: 0 auto;
+    color: #010913;
+    font-size: 24px;
+  }
+  
+  .planets__name {
+    margin: 20px;
+    color: #653342;
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid #653342;
+    text-align: center;
+    list-style-type: none;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  label {
+      font-size: 29px;
+  }
+
+  label:hover {
+    color: #910202;
+    transition: all 0.8s ease;
+  }
